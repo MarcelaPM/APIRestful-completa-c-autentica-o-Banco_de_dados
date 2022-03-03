@@ -1,0 +1,49 @@
+from models import Pessoas, Atividades, Usuarios
+
+#Insere dados na tabela pessoa:
+def insere_pessoas():
+  pessoa = Pessoas(nome='Maria',idade=18)
+  pessoa.salva()
+  pessoa = Pessoas(nome='Jose', idade=20)
+  pessoa.salva()
+
+#Consulta informações na tabela pessoa:
+def consulta_pessoas():
+  pessoas = Pessoas.query.all()
+  print(pessoas)
+  
+#Altera dados na tabela pessoa:
+def altera_pessoa():
+    pessoa=Pessoas.query.filter_by(nome='Jose').first()
+    pessoa.nome='Jose'
+    pessoa.salva()
+
+#Exclui dados na tabela pessoa:
+def exclui_pessoa():
+    pessoa=Pessoas.query.filter_by(nome='Jose').first() 
+    pessoa.deleta()
+
+#Insere sas informaçoes de login, senha e status de usuario
+def insere_usuario(login,senha,ativo):
+  usuario=Usuarios(login=login, senha=senha, ativo=ativo)
+  usuario.salva()
+
+#Altera status do usuario
+def altera_usuario():
+    usuario=Usuario.query.filter_by(nome='ana').first()
+    usuario.ativo=0
+    usuario.salva()
+
+def consulta_usuarios():
+  usuarios=Usuarios.query.all()
+  print(usuarios)
+
+if __name__=='__main__':
+  #insere_usuario('ana','1234',1)
+  #insere_usuario('tom','5678',0)
+  #consulta_usuarios()
+  #insere_pessoas()
+  #consulta_pessoas()
+  #altera_pessoa()
+  #exclui_pessoa()
+  #consulta_pessoas()
