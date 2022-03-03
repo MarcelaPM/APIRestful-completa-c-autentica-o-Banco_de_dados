@@ -1,0 +1,2 @@
+# APIRestful-completa-c-autentica-o-Banco_de_dados
+Criação de um banco de dados em Python, com módulos para cadastro de pessoas e atividades desenvolvidas por elas, utilizando SQLAlquemy e SQLite.  As informações cadastradas no banco de dados podem ser acessadas e alteradas por requisições a uma API (RestFul). As requisições de acesso (tipo get) para visualização de dados são livres, porém para alteração (put e delete) e inclusão de novos dados (post) a API solicita uma autenticação por um login e senha, cadastrados no banco de dados. 
